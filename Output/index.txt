@@ -1,0 +1,78 @@
+ 
+   
+    
+
+Blue-sky printing
+
+There are many reasons for using Prince. We will show you 8.
+
+= E —_— led
+
+JavaScript three: CS$3 columns =
+
+ 
+
+Prince supports JavaScript so that programmers can This document is laid out in two columns on the
+Ben achieve effects not possible in HTML and CSS along. first page. The next pages are more narrow and
+For example, this document has a small script that au- therefore only has room for one column. The
+tomatically generates a table of contents: number of columns is automatically adjusted based
+on the available width.
+
+JavaScript... eeeeeeeeees 1 CSS3 transforma........... 1
+
+More JavaScript.......... 1 Background images.....2
+
+CSS3 columns ............. 1 CSS3 selectors............. 2 4 = St |
+
+Styling pages... 1 More transforms......... 2 a y I ng p age S
+
+The second page of this document is different from the first: it’s up
+t P M 7 right and it has no background image. This is achieved by styling
+WO : 0 re ava C rl pt pages instead of elements.
+This document lists 8 numbered features. Notice that the
+first three features are numbered with spelled-out numbers,
+while the rest use digits. This is achieved with a small script 4) a CSS 3 t ra nl sfo rim S
+that exchanges digits for letters when the number is three or
+smaller.
+
+ 
+
+CSS3 introduces transforms, which can be used to scale and
+
+ 
+
+ 
+—}—
+XY
+
+rotate elements. «Prince» is rotated 90 degerees on the right.
+Also, it has been moved to a margin box so that it appears
+outside the normal text flow.
+
+6: Background images
+
+The image on the right is used as the
+background image on the first page.
+There, only part of the image is visible.
+This is achieved by carefully setting the
+position and pixel-density of the image.
+Also, notice how the background image is
+«bleeding»; it extends slightly outside the
+page to avoid white edges when the paper
+is cut.
+
+CSS3 selectors
+
+Notice how every other item in our list of eight is in italics. This is achieved by
+selecting and styling even-numbered items.
+
+ 
+
+Pri
+
+8: More transforms
+
+Transforms can be applied to images as well as text. Below is the blue-sky background image rotated at various angles.
+
+ 
+

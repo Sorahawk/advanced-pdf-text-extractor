@@ -1,0 +1,638 @@
+A SAMPLE RESEARCH PAPER/THESIS/DISSERTATION ON ASPECTS OF
+
+ELEMENTARY LINEARY ALGEBRA
+
+by
+James Smith
+
+B.S., Southern Illinois University, 2010
+
+A Research Paper/Thesis/Dissertation
+Submitted in Partial Fulfillment of the Requirements for the
+Master of Science Degree
+
+Department of Mathematics
+in the Graduate School
+Southern Illinois University Carbondale
+July, 2006
+(Please replace Name and Year with your information and delete all instructions)
+
+Copyright by NAME, YEAR
+All Rights Reserved
+
+**(This page is optional)**
+RESEARCH PAPER/THESIS/DISSERTATION APPROVAL
+
+TITLE (in all caps)
+
+By
+
+(Author)
+
+A Thesis/Dissertation Submitted in Partial
+Fulfillment of the Requirements
+for the Degree of
+(Degree)
+
+in the field of (Major)
+
+Approved by:
+(Name of thesis/dissertation chair), Chair
+(Name of committee member 1)
+(Name of committee member 2)
+
+(Name of committee member 3)
+
+ 
+
+(Name of committee member 4)
+
+Graduate School
+Southern Illinois University Carbondale
+(Date of Approval)
+AN ABSTRACT OF THE DISSERTATION OF
+
+NAME OF STUDENT, for the Doctor of Philosophy degree in MAJOR
+FIELD, presented on DATE OF DEFENSE, at Southern Illinois University Car
+bondale. (Do not use abbreviations.)
+
+TITLE: A SAMPLE RESEARCH PAPER ON ASPECTS OF ELEMENTARY
+LINEAR ALGEBRA
+
+MAJOR PROFESSOR: Dr. J. Jones
+
+(Begin the abstract here, typewritten and double-spaced. A thesis abstract
+should consist of 350 words or less including the heading. A page and one-half is
+
+approximately 350 words.)
+
+lil
+DEDICATION
+
+(NO REQUIRED FOR RESEARCH PAPER)
+
+(The dedication, as the name suggests is a personal dedication of one’s work.
+The section is OPTIONAL and should be double-spaced if included in the the
+sis/dissertation. )
+ACKNOWLEDGMENTS
+
+(NOT REQUIRED IN RESEARCH PAPER)
+
+I would like to thank Dr. Jones for his invaluable assistance and insights leading
+to the writing of this paper. My sincere thanks also goes to the seventeen members
+of my graduate committee for their patience and understanding during the nine
+years of effort that went into the production of this paper.
+
+A special thanks also to Howard Anton [1], from whose book many of the
+examples used in this sample research paper have been quoted. Another special
+thanks to Prof. Ronald Grimmer who provided the previous thesis template upon
+
+which much of this is based and for help with graphics packages.
+PREFACE
+
+(DO NOT USE IN RESEARCH PAPER)
+
+A preface or foreword may contain the author’s statement of the purpose of
+
+the study or special notes to the reader. This section is OPTIONAL and should be
+
+double-spaced if used in the thesis/dissertation.
+
+vi
+TABLE OF CONTENTS
+
+Abstract... iii
+Dedication... 2. iv
+Acknowledgments... 2... Vv
+Preface 2. 0. vi
+Dist @0THBI6S aes cc eR Re viii
+List of Figures 2... ix
+[boinc NG aici a a ee ee ee 1
+1 Systems of Linear Equations and Matrices ...............0.4. 2
+1.1 Introductions to Systems of Linear Equations ............ 2
+1.2 Gaussian Elimination... .......0.......0.2..20000. 4
+1.3 Further Results on Systems of Equations ............... 5
+1.3.1 Some Important Theorems................... 6
+
+2 Determinants... 2... 0... 7
+2.1 The Determinant Function. ..................20-.4 7
+2.2 Evaluating Determinants by Row Reduction ............. 8
+2.2.1 Some Final Conclusions .............220046. 8
+
+2.3 Properties of the Determinant Function. ............... 8
+
+5S Flee cet tame et te weet HEHE He il
+References. 2. 0. 0 16
+Appendix . 2... 16
+Vita 2. ee 19
+
+vu
+LIST OF TABLES
+
+2.1 An example table showing how centering works with extended captioning. 9
+
+vill
+1.1
+1.2
+
+Dal.
+2.2
+3.1
+3.2
+3.9
+3.4
+
+LIST OF FIGURES
+
+(a) no solution, (b) one solution, (c) infinitely many solutions .... .
+Inside and outside numbers of a matrix multiplication problem of Ax B =
+AB, showing how the inside dimensions are dropped and the dimensions
+of the product are the outside dimenions..................
+An encapsulated postscript fille. .......... 0.2.0.0 000004
+A second encapsulated postscript file... ..............0..
+
+Two rows of graphics: (a) Square (b) Circle (c) Rectangle ......
+
+Three rows of graphics: (a)—(c) Squares. (d)—(f) Circles. (g)—(i) Ovals.
+
+Use of verbatim environment .............0 0.000 + eee
+
+Matrix Rotated 90 degrees. . 2... 0...
+
+10
+10
+2
+13
+14
+15
+INTRODUCTION
+
+This paper provides an elementary treatment of linear algebra that is suitable
+for students in their freshman or sophomore year. Calculus is not a prerequisite.
+
+The aim in writing this paper is to present the fundamentals of linear algebra in the clearest possible way. Pedagogy is the main consideration. Formalism
+is secondary. Where possible, basic ideas are studied by means of computational
+examples and geometrical interpretation.
+
+The treatment of proofs varies. Those proofs that are elementary and hve significant pedagogical content are presented precisely, in a style tailored for beginners.
+A few proofs that are more difficult, but pedgogically valuable, are placed at the end
+of of the section and marked “Optional”. Still other proofs are omitted completely,
+with emphasis placed on applying the theorem.
+
+Chapter 1 deals with systems of linear equations, how to solve them, and
+some of their properties. It also contains the basic material on matrices and their
+arithmetic properties.
+
+Chapter 2 deals with determinants. I have used the classical permutation
+approach. This is less abstract than the approach through n-linear alternative forms
+
+and gives the student a better intuitive grasp of the subject than does an
+inductive development.
+
+Chapter 3 introduces vectors in 2-space and 3-space as arrows and develops the
+analytic geometry of lines and planes in 3-space. Depending on the background of
+
+the students, this chapter can be omitted without a loss of continuity.
+CHAPTER 1
+SYSTEMS OF LINEAR EQUATIONS AND MATRICES
+
+1.1 INTRODUCTIONS TO SYSTEMS OF LINEAR EQUATIONS
+
+In this section we introduce base terminology and discuss a method for solving
+systems of linear equations.
+
+A line in the xy-plain can be represented algebraically by an equation of the
+form
+
+a,x + agy = b
+
+An equation of this kind is called a linear equation in the variables x and y. More
+generally, we define a linear equation in the n variables x1,...,2%, to be one that
+
+can be expressed in the form
+
+ 
+
+121 + Antz + +++ + Ont = b (1.1)
+where a1, d2,...@, and 6 are real constants.
+Definition. A finite set of linear equations in the variables 71, 72,..., 2» is called
+
+a system of linear equations.
+
+Not all systems of linear equations has solutions. A system of equations that
+has no solution is said to be inconsistent. If there is at least one solution, it is
+called consistent. 'To illustrate the possibilities that can occur in solving systems of
+linear equations, consider a general system of two linear equations in the unknowns
+
+x and y:
+
+a,x + by = Cj
+
+ 
+
+dot + boy = C2
+The graphs of these equations are lines; call them /, and J. Since a point (x, y) lies
+on a line if and only if the numbers x and y satisfy the equation of the line, the
+solutions of the system of equations will correspond to points of intersection of 1;
+
+and ly. There are three possibilities:
+
+ly ly ly lo 1, le
+
+(a) (b) (c)
+
+Figure 1.1. (a) no solution, (b) one solution, (c) infinitely many solutions
+
+The three possiblities illustrated in Figure 1.1 are as follows:
+
+(a) J, and lg are parallel, in which case there is no intersection, and consequently
+
+no solution to the system.
+
+(b) d, and ly intersect at only one point, in which case the system has exactly one
+
+solution.
+(c) J, and ly coincide, in which case there are infinitely many points of intersection,
+
+and consequently infinitely many solutions to the system.
+
+Although we have considered only two equations with two unknowns here, we
+will show later that this same result holds for arbitrary systems; that is, every system
+of linear equations has either no solutions, exactly one solution, or infinitely many
+
+solutions.
+
+1.2 GAUSSIAN ELIMINATION
+In this section we give a systematic procedure for solving systems of linear
+equations; it is based on the idea of reducing the augmented matrix to a form that
+
+is simple enough so that the system of equations can be solved by inspection.
+
+Remark. It is not difficult to see that a matrix in row-echelon form must have zeros
+below each leading 1. In contrast a matrix in reduced row-echelon form must have
+
+zeros above and below each leading 1.
+
+As a direct result of Figure 1.1 on page 3 we have the following important
+
+theorem.
+
+Theorem 1.2.1. A homogenous system of linear equations with more unknowns
+
+than equations always has infinitely many solutions
+
+The definition of matrix multiplication requires that the number of columns of
+the first factor A be the same as the number of rows of the second factor B in order
+to form the product AB. If this condition is not satisfied, the product is undefined.
+A convenient way to determine whether a product of two matrices is defined is to
+write down the size of the first factor and, to the right of it, write down the size of
+the second factor. If, as in Figure 1.2, the inside numbers are the same, then the
+
+product is defined. The outside numbers then give the size of the product.
+A B AB
+
+m xX rox on = mxn
+inside
+outside
+
+Figure 1.2. Inside and outside numbers of a matrix multiplication problem of A x B = AB, showing how the inside dimensions
+are dropped and the dimensions of the product are the outside
+dimenions.
+
+Although the commutative law for multiplication is not valid in matrix arithmetic, many familiar laws of arithmetic are valid for matrices. Some of the most
+
+important ones and their names are summarized in the following proposition.
+
+Proposition 1.2.2. Assuming that the sizes of the matrices are such that the indicated operations can be performed, the following rules of matrix arithmetic are
+
+valid.
+
+(a) A+B=B+A (Commutative law for addition)
+
+ 
+
+(b|) A+(B4+C)=(A+B)4+C (Associative law for addition)
+
+(c) A(BC) =(AB)C (Associative law for multiplication)
+
+1.3 FURTHER RESULTS ON SYSTEMS OF EQUATIONS
+
+In this section we shall establish more results about systems of linear equations
+and invertibility of matrices. Our work will lead to a method for solving n equations
+in nm unknowns that is more efficient than Gaussian elimination for certain kinds of
+
+problems.
+1.3.1 Some Important Theorems
+Theorem 1.3.1. Jf A is an invertible n x n matrix, then for each n x 1 matrix B,
+
+the system of equations AX = B has exactly one solution, namely, X = A~'B.
+
+Proof. Since A(A~'B) = B, X = A~'B isa solution of AX = B. To show that this
+is the only solution, we will assume that Xo is an arbitrary solution, and then show
+that Xo must be the solution A7!B.
+
+If Xo is any solution, then AXp = B. Multiplying both sides by A~!, we obtain
+Xo =A"B. O
+
+Theorem 1.3.2. Let A be a square matriz.
+(a) If B is a square matrix satisfying BA = I,then B= A7t.
+
+(b) If B is a square matrix satisfying AB =I, then B= A~'.
+
+In our later work the following fundamental problem will occur over and over
+again in various contexts.
+
+Let A be fixed m x n matrix. Find all m x 1 matrices B such that the system
+of equations AX = B is consistent.
+
+If A is an invertible matrix, Theorem 1.3.2 completely solves this problem by
+
+asserting that for every mxn matrix B, AX = B has the unique solution X = A7'B.
+CHAPTER 2
+DETERMINANTS
+
+2.1 THE DETERMINANT FUNCTION
+
+We are all familiar with functions lilke f(x) = sinz and f(x) = x?, which
+associate a real number f(a) with a real value of the variable x. Since both x
+and f(x) assume only real values, such functions can be described as real-valued
+functions of a matrix variable, that is, functions that associate a real number f(X)
+with a matrix X.
+
+Before we shall be able to define the determinant function, it will be necessary
+
+to establish some results concerning permutations.
+
+Definition. A permutation of the set of integers {1,2,...,n} is an arrangement of
+
+these integers in some order without ommissions or repetitions.
+
+Example 2.1.1. There are six different permutations of the set of integers {1, 2,3}.
+
+These are
+(1, 2, 3)(2, 1, 3)(8, 1, 2) (2.1)
+(1, 3, 2)(2, 3, 1)(8, 2, 1) (2.2)
+
+One convenient method of systematically listing permutations is to use a per
+mutation tree. This method will be illustrated in our next example.
+
+Example 2.1.2. List all permutations of the set of integers {1,2,3, 4}
+Solution. By drawing a permutation tree with each branch representing all four
+
+numbers, we see that there are a total of 24 possible permutations.
+2.2 EVALUATING DETERMINANTS BY ROW REDUCTION
+In this section we show that the determinant of a matrix can be evaluated by reducing the matrix to row-echelon form. This method is of importance since it avoids
+the lengthy computations involved directly applying the determinant definition.
+We first consider two class of matrices whose determinants can be easily eval
+uated, regardless of the size of the matrix.
+
+Theorem 2.2.1. Jf A is any square matrix that contains a row of zeros, then
+
+det(A) = 0.
+
+Theorem 2.2.2. If A is ann x n triangular matriz, then det(A) is the product of
+
+the entries on the main diagonal; that is det(A) = a41@22°++Gmn
+Example 2.2.1. Evaluate det(A) where
+
+2.2.1 Some Final Conclusions
+It should be evident from the examples in this section that whenever a square
+matrix has two proportional rows (like the first and second rows of A), it is possible
+to introduce a row of zeros by adding a suitable mutliple of one of these rows to the
+other. Thus, if a square matrix has two proportional rows, its determinant is zero.
+In the next section we consider some examples of linear algebra functions ex
+pressed in table form — primarily to see the list of tables command works in Latex.
+
+2.3 PROPERTIES OF THE DETERMINANT FUNCTION
+In this section we develop some of the fundamental properties of the determi
+nant function. our work here will give us some further insight into the relationship
+between a square matrix and its determinant. One of the immediate consequences of
+this material will be an important determinant test for the invertibility of a matrix
+
+Consider Table 2.1 and its implications in the area of linear algebra.
+
+Determinant
+
+Inverse
+
+ 
+
+Table 2.1. An example table showing how centering works with
+extended captioning.
+
+It should be evident from the examples in this section that whenever a square
+
+matrix has two proportional rows (like the first and second rows of A), it is possible
+to introduce a row of zeros by adding a suitable mutliple of one of these rows to the
+other. Thus, if a square matrix has two proportional rows, its determinant is zero.
+
+We hope this has given some insights into the basics of linear algebra and its
+impact on the world around us. We leave you now with two encapsulated postscript
+
+graphs which illustrate the main points discussed in this paper.
+
+Figure 2.1. An encapsulated postscript file.
+
+ 
+
+ 
+
+ 
+
+Figure 2.2. A second encapsulated postscript file.
+
+10
+CHAPTER 3
+EXAMPLES
+
+Some examples of the definitions found in the file ps-defs.tex follow below.
+Here are examples of how you can use equation numbers with multiple line
+
+equations.
+
+ 
+
+= f(a) + (g(a) + h(a) (3.1)
+
+ 
+
+= (f(a) + g(a)) + h(a) (3.3)
+
+ 
+Below is a figure which shows how to line up small figures on multiple lines.
+The .dvi version is immediately below. The .pdf version may be found underneath
+the complete figure and commented out. If you exchange the sections commented
+
+out, then you can compile a .pdf file.
+
+ 
+
+ 
+
+ 
+
+ 
+
+(c)
+
+Figure 3.1. Two rows of graphics: (a) Square (b) Circle (c) Rectangle
+
+12
+Three figures across the page requires fairly small figures to fit within the Grad
+uate School margins.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(g) (h) (i)
+
+Figure 3.2. Three rows of graphics: (a)—(c) Squares. (d)—
+(f) Circles. (g)—(i) Ovals.
+
+13
+The verbatim environment can be useful when using data from a spreadsheet
+
+as is done below.
+
+X,TRUE_SUR,MSE SIM,MSE ZHAO,MSE JIAN,MSE PZHAO,MSE PJIAN
+0.0 0.7520 0.03864 0.01407 0.01407 0.01180 0.01223
+4.0 0.7273 0.04079 0.01675 0.01675 0.01479 0.01551
+8.0 0.7035 0.04203 0.01923 0.01923 0.01675 0.01817
+12.0 0.6524 0.04581 0.02157 0.02135 0.01932 0.02043
+16.0 0.6029 0.05146 0.02345 0.02266 0.02304 0.02320
+20.0 0.5551 0.05343 0.02498 0.02393 0.02627 0.02509
+24.0 0.5089 0.05449 0.02677 0.02453 0.02936 0.02641
+28.0 0.4641 0.05706 0.02901 0.02442 0.03315 0.02722
+32.0 0.4209 0.05719 0.02910 0.02341 0.03558 0.02776
+36.0 0.3790 0.05656 0.02974 0.02229 0.03745 0.02667
+40.0 0.3385 0.05518 0.02940 0.02119 0.03864 0.02618
+44.0 0.2994 0.05344 0.02989 0.02054 0.03928 0.02531
+48.0 0.2615 0.04950 0.02803 0.01906 0.03855 0.02414
+52.0 0.2249 0.04582 0.02712 0.01812 0.03849 0.02229
+56.0 0.1895 0.04101 0.02454 0.01578 0.03632 0.01918
+60.0 0.1552 0.03564 0.02282 0.01315 0.03372 0.01629
+64.0 0.1220 0.03216 0.02124 0.00997 0.03188 0.01391
+68.0 0.0900 0.02420 0.01730 0.00688 0.02551 0.01070
+72.0 0.0590 0.01592 0.01254 0.00363 0.01811 0.00622
+76.0 0.0290 0.00865 0.00838 0.00110 0.00886 0.00368
+
+Figure 3.3. Use of verbatim environment
+
+On the following page is an example of how to rotate text that is too long to
+
+fit within the horizontal margins that are required.
+
+14
+GT
+
+‘sooIsop JG PoyeJOY XU ‘P'E oMsty
+
+—(8p, (3; 1) — 8p, (151)
+
+(6p, (331) — Op, (431)
+
+0
+—(8p, (351) — 8p, (13 1))
+
+(6p, (3; 1) — Op, (15 1)
+
+0
+
+0
+
+—(8D, (3; 1) — Op, (151)
+
+Ay
+
+Az
+
+0
+
+0
+
+(6p, (351) — @p,,_, (13.1)
+
+0
+
+—(9p,, (3;1) — 9p,, (15 1))
+
+(6p,, (3:1) — 9p,, (131)
+REFERENCES
+
+[1] Anton, H., Elementary Linear Algebra, John Wiley & Sons, New York, 1977.
+
+(2) Huang, X. and Krantz, $.G., On a problem of Moser, Duke Math. J. 78 (1995),
+213-228.
+
+[3] Kellog, O.D., Harmonic functions and Green’s integral, Trans. Amer. Math.
+Soc. 13 (1912), 109-132.
+
+[4] Kruzhilin, N.G., Local automorphisms and mappings of smooth strictly pseudoconver hypersurfaces, (Russian), Dokl. Akad. Nauk SSSR 271 (1983), 280-282.
+
+[5] Macdonald, I.G., Symmetric Functions and Hall Polynomials, Second edition,
+Clarendon, Oxford, 1995.
+
+[6] Rasulov, K.M., Dokl. Akad. Nauk SSSR 252 (1980), 1059-1063; English transl.
+in Soviet Math. Dokl. 21 (1980).
+
+[7] Rasulov, K.M., Dokl. Akad. Nauk SSSR 270 (1983), 1061-1065; English transl.
+in Soviet Math. Dokl. 27 (1983).
+
+16
+APPENDICES
+
+**(No Page Number)**
+APPENDIX I
+
+17
+APPENDIX I
+
+18
+VITA
+
+Graduate School
+Southern Illinois University
+
+James Smith Date of Birth: July 01, 1975
+2244 West College Street, Carebondale, Illinois 62901
+
+1001 South Walnut Street, Chicago, Ilinois, 60411
+
+email address (email after graduation)
+
+Southern Illinois University at Carbondale
+Bachelor of Science, Mathematics, May 1998
+(ONLY MENTION DEGREES EARNED, NOT DEGREES IN PROGRESS)
+
+Special Honors and Awards: (OMIT IF NONE)
+
+Research Paper Title:
+A Sample Research Paper on Aspects of Elementary Linear Algebra
+
+Major Professor: Dr. J. Jones
+
+Publications: (OMIT IF NONE)
+
+19
+
