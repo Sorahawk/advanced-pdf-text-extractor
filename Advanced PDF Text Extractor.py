@@ -5,9 +5,9 @@ from pdf2image import convert_from_path, pdfinfo_from_path
 
 
 mainPath = os.getcwd()
-outputPath = mainPath + '\\Output'
+outputPath = mainPath + '/Output'
 
-os.chdir(mainPath + '\\Input')
+os.chdir(mainPath + '/Input')
 
 for infile in glob.glob('*.pdf'):
 	pdfInfo = pdfinfo_from_path(infile)
@@ -22,7 +22,7 @@ for infile in glob.glob('*.pdf'):
 			page.save(pageImageName, 'JPEG')
 			pageCounter += 1
 
-	outfileName = "{}\\{}txt".format(outputPath, infile[:-3])
+	outfileName = "{}/{}txt".format(outputPath, infile[:-3])
 	with open(outfileName, 'w') as outfile:
 		for pageNum in range(1, pageCounter):
 			pageImageName = '{} p{}.jpg'.format(infile[:-4], pageNum)
